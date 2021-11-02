@@ -66,15 +66,20 @@ public class Main {
 
     //11
 
-    public static int SumArr(int[] arr) {
+    public static String SumArr(int[] arr) {
         int arrLength = arr.length;
         int counter = 0;
-
+        String answer = "";
         for(int i = 0; i < arrLength; i++) {
             counter += arr[i] * arr[i];
+            if(counter % 2 == 0){
+                answer = "Чётное";
+            }
+            else{
+                answer = "Не совсем чётное";
+            }
         }
-
-        return counter;
+        return answer;
     }
 
     //12
